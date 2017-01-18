@@ -12,7 +12,18 @@
 * Delete temp file created.
 * Write it up.
 * ...
-* 
+* Figure out if it's possible to curl the html file needed http://stackoverflow.com/questions/12399087/curl-to-access-a-page-that-requires-a-login-from-a-different-page
+
+https://c9.io/login
+
+curl --user user:password --cookie-jar ./somefile https://c9.io/login
+curl --cookie ./somefile https://c9.io/mediatechgender
+
+
+curl --user user:pass --cookie-jar ./somefile https://xyz.com/a
+and then read them back in when running the second:
+
+curl --cookie ./somefile https://xyz.com/b
 
 #### Browser Dump
 
