@@ -8,7 +8,7 @@
 
 A set of bash scripts used for archiving Cloud9 Virtual-Machines(VM).
 
-View an example of the html page the script creates. <a href="https://haoscleanupcrew.github.io/cloud9_cleanup_toolset/docs/index.html" target="_blank">EXAMPLE!</a>
+View an example of the html page the script creates. [EXAMPLE.](https://haoscleanupcrew.github.io/cloud9_cleanup_toolset/docs/index.htm)
 
 #### Wen?
 
