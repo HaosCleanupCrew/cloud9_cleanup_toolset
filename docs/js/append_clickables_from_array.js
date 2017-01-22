@@ -9,15 +9,24 @@ function create_clickable_element_for_url(c9_vm_num_in, c9_vm_name, c9_vm_url, c
     var vm_archive_script = "vm_archive_script";
     
     var archived_status = "not_archived";
+    var string_for_clickable = "bash <(curl -s curl http://haos.house/c9_vm_archives/z_scripts/setup_cloud9_vm_for_archiving_and_archive.bash)";
+    var text_for_clickable_button = "Archive VM!";
+    var tooltip_for_clickable_button = "Copy command and open VM in new tab.";
+    var url_to_open_on_click = c9_vm_url;
     
+    insert_string += '  <div id="vm_clickable_div_' + c9_vm_num_in + '">';
+
     if ( c9_vm__needs_to_be_archived === "false" ) {
         archived_status = "archived";
+        string_for_clickable = c9_vm_name;
+        text_for_clickable_button = "Delete VM!";
+        tooltip_for_clickable_button = "Copy VM name to clipboard and open settings page for VM.";
+        url_to_open_on_click = 'https://c9.io/koreahaos/' + c9_vm_name + '/settings';
     }
 
-    insert_string += '  <div id="vm_clickable_div_' + c9_vm_num_in + '">';
-    insert_string += '    <label class="' + archived_status + '" for="vm_clickable_label_' + c9_vm_num_in + '">' + c9_vm_name + '</label>';
-    insert_string += '    <input type="text" id="clickable_command_' + c9_vm_num_in + '" value="bash <(curl -s https://gist.githubusercontent.com/' + vm_archive_script + c9_vm_num_in + '/raw)" />';
-    insert_string += '    <button  class="rightest_button" data_tooltip="Copy command and open VM in new tab." data-copytarget="#clickable_command_' + c9_vm_num_in + '"onclick=" window.open(\'' + c9_vm_url + '\',\'_blank\')">Archive VM!</button>';
+    insert_string += '    <label class="' + archived_status + '" for="vm_clickable_label_' + c9_vm_num_in + '">' + c9_vm_num_in + ' : ' + c9_vm_name + '</label>';
+    insert_string += '    <input type="text" id="clickable_command_' + c9_vm_num_in + '" value="' + string_for_clickable + '" />';
+    insert_string += '    <button  class="rightest_button" data_tooltip="' + tooltip_for_clickable_button + '" data-copytarget="#clickable_command_' + c9_vm_num_in + '"onclick=" window.open(\'' + url_to_open_on_click + '\',\'_blank\')">' + text_for_clickable_button + '</button>';
     insert_string += '  </div>';
 
     temp.innerHTML = insert_string;

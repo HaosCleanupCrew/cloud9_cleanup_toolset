@@ -16,7 +16,7 @@ temp_file='virtual_machine_list.temp'
 output_file='/docs/js/add_clickable_urls_to_array.js'
 user_name='koreahaos'
 
-cat $input_file | grep -Eo "https://ide.c9.io/$user_name/[a-zA-Z0-9./?=_-]*" | sort | uniq > $temp_file
+cat $GOPATH/z_vm_archive_repo/$input_file | grep -Eo "https://ide.c9.io/$user_name/[a-zA-Z0-9./?=_-]*" | sort | uniq > $temp_file
 
 vm_count=0;
 num_lines_in_temp_file=$(wc -l < $temp_file);

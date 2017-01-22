@@ -1,0 +1,20 @@
+make it work if there has been changes to the remote
+figure out why the index.html file gets removed occasionally.
+Display stats on the html page.
+Only update git if needed.
+Figure out if it's possible to push to the remote without downloading the repo.
+   * http://unix.stackexchange.com/questions/233327/is-it-possible-to-clone-only-part-of-a-git-project
+Move the scripts functions into seperate files by action.
+Fix the logging.
+   * Log which version did the Archiving.
+   * Create function that logs to file whatever function is passed to it.
+   
+Add links for deleting VM to html page.
+Seperate the gh-pages files into seperate branch?
+Fix problem with archiving repo if VM has .gt directory in project directory.
+Download repo once archive is ready vs previous.
+Try and figure out when the VM was created (script exists...)
+Number the VM on the html page.
+Set up archive so it can reload a VM.
+Seperate arxhive actions from VM config and setup actions.
+Create pause if another VM is being archived. (like a multi-thread handler.)
