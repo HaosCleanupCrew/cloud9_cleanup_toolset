@@ -2,7 +2,28 @@
 
 ### Bash script(s) for consolidating Cloud9 VM.
 
-**STATUS :** *being built*
+#### Who?
+
+#### Wat?
+
+A set of bash scripts used for archiving Cloud9 Virtual-Machines(VM).
+
+View an example of the html page the script creates. [link](https://haoscleanupcrew.github.io/cloud9_cleanup_toolset/docs/index.html)
+
+#### Wen?
+
+#### Wer?
+
+#### Why?
+
+While studying in Korea, ...
+
+# How?
+
+
+
+
+**STATUS :** *being built/tested*
 
 #### ToDo:
 
