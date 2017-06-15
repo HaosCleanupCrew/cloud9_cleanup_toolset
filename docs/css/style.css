@@ -5,6 +5,10 @@ body {
   background-color: #ddd;
 }
 
+.user_input_field {
+  border-radius: 5px 5px 5px 5px;
+}
+
 label {
   clear: both;
   display: block;
@@ -26,9 +30,11 @@ label {
   font-size: 1em;
 }
 
+/*
+*/
+
 input,
 button {
-  float: left;
   font-size: 1em;
   padding: 3px 6px;
   margin: 0;
@@ -45,14 +51,10 @@ button {
 input {
   width: 15%;
   background-color: #fff;
-  border-right: 0 none;
-  border-radius: 3px 0 0 3px;
 }
 
 button {
-  position: relative;
   background-color: #cccccc;
-  border-radius: 0 3px 3px 0;
   cursor: pointer;
 }
 
@@ -148,6 +150,24 @@ button:hover {
   border-left-width: 1px;
   border-right-width: 1px;
   border-radius: 0px 5px 5px 0px;
+}
+
+.leftest_input_field_for_clickable {
+  border-right-width: 1px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.leftest_input_field_for_clickable:disabled:hover {
+  cursor: not-allowed;
+}
+
+.standard_button {
+  border-radius: 5px 5px 5px 5px;
+}
+
+.user_input_label {
+  float: left;
+  width: 150px;
 }
 
 

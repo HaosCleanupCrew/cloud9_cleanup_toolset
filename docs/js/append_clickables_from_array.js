@@ -25,7 +25,7 @@ function create_clickable_element_for_url(c9_vm_num_in, c9_vm_name, c9_vm_url, c
     }
 
     insert_string += '    <label class="' + archived_status + '" for="vm_clickable_label_' + c9_vm_num_in + '">' + c9_vm_num_in + ' : ' + c9_vm_name + '</label>';
-    insert_string += '    <input type="text" id="clickable_command_' + c9_vm_num_in + '" value="' + string_for_clickable + '" />';
+    insert_string += '    <input type="text" class="leftest_input_field_for_clickable" id="clickable_command_' + c9_vm_num_in + '" value="' + string_for_clickable + '" disabled/>';
     insert_string += '    <button  class="rightest_button" data_tooltip="' + tooltip_for_clickable_button + '" data-copytarget="#clickable_command_' + c9_vm_num_in + '"onclick=" window.open(\'' + url_to_open_on_click + '\',\'_blank\')">' + text_for_clickable_button + '</button>';
     insert_string += '  </div>';
 

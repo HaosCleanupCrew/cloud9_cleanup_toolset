@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Z Haos Clickables</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favi/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favi/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favi/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favi/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favi/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favi/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favi/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favi/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favi/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favi/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favi/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favi/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favi/favicon-16x16.png">
+  <link rel="manifest" href="img/favi/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favi/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- 
+  <script src="js/add_clickable_urls_to_array.js"></script>
+
+  <style>
+    .user_input_label{
+      float: left;
+      width: 150px;
+    }
+  </style>
+  -->
+</head>
+
+<body>
+
+  <div>
+    <h1><a id="heading_link" href="https://github.com/HaosCarroll/z_haos_clickables" target="_blank">Haos Clickable Cloud9!</a></h1>
+  </div>
+
+  <div id="c9_vm_list">
+  </div>
+  <div id="user_input_div"> 
+    <div><span class="user_input_label">Cloud9 User ID :</span><input class="user_input_field" type="text" id="c9" placeholder="benjaminhaos"></div>
+    <div><span class="user_input_label">VM Basename :</span><input class="user_input_field" type="text" id="vm_basename" placeholder="burner"></div>
+    <div><span class="user_input_label">Number of VM :</span><input class="user_input_field" type="number" id="num_of_vm_of_basename" value="10"></div>
+
+    <button class="standard_button" onclick="create_clickable_list_of_vmz_to_delete()">Create List</button></br>
+  </div>
+  <script>
+    function make_click_to_delete_inner_html(usr_name, vm_basename, num_of_vm) {
+      var return_string;
+      return_string = "";
+
+      for (var i = 1; i <= num_of_vm; i++) {
+        var vm_name = vm_basename + i;
+        var vm_delete_url = "https://c9.io/" + usr_name + "/" + vm_name + "/settings";
+
+        var text_for_clickable_button = "Delete VM!";
+        var tooltip_for_clickable_button = "Copy VM name to clipboard and open settings page for VM.";
+        var url_to_open_on_click = vm_delete_url;
+
+        return_string += '  <div id="vm_clickable_div_' + i + '">';
+        return_string += '    <label class="label_for_vm_to_delete" for="vm_clickable_label_' + i + '">' + vm_name + '</label></br>';
+        return_string += '    <input class="leftest_input_field_for_clickable" type="text" id="clickable_command_' + i + '" value="' + vm_name + '" disabled/>';
+        return_string += '    <button  class="rightest_button" data_tooltip="' + tooltip_for_clickable_button + '" data-copytarget="#clickable_command_' + i + '"onclick=" window.open(\'' + url_to_open_on_click + '\',\'_blank\')">' + text_for_clickable_button + '</button>';
+        return_string += '  </div>';
+
+        //return_string += "<span>" + usr_name + vm_basename + (i) + "</span></br>";
+      }
+
+      return return_string;
+    }
+
+    function create_clickable_list_of_vmz_to_delete() {
+      var user_name = document.getElementById("c9").value;
+      var basename = document.getElementById("vm_basename").value;
+      var num_of_vm = document.getElementById("num_of_vm_of_basename").value;
+
+      if (user_name === "") {
+        user_name = document.getElementById("c9").placeholder;
+      }
+      if (basename === "") {
+        basename = document.getElementById("vm_basename").placeholder;
+      }
+
+      var inner_html;
+
+      inner_html = make_click_to_delete_inner_html(user_name, basename, num_of_vm);
+      document.getElementById("c9_vm_list").innerHTML = inner_html;
+    }
+  </script>
+
+</body>
+
+<script src="js/attach_click_to_copy_function.js"></script>
+
+</html>
