@@ -68,7 +68,7 @@
 
         return_string += '  <div id="vm_clickable_div_' + i + '">';
         return_string += '    <label class="label_for_vm_to_delete" for="vm_clickable_label_' + i + '">' + vm_name + '</label></br>';
-        return_string += '    <input class="leftest_input_field_for_clickable" type="text" id="clickable_command_' + i + '" value="' + vm_name + '" disabled/>';
+        return_string += '    <input class="leftest_input_field_for_clickable" type="text" id="clickable_command_' + i + '" value="' + vm_name + '" />';
         return_string += '    <button  class="rightest_button" data_tooltip="' + tooltip_for_clickable_button + '" data-copytarget="#clickable_command_' + i + '"onclick=" window.open(\'' + url_to_open_on_click + '\',\'_blank\')">' + text_for_clickable_button + '</button>';
         return_string += '  </div>';
 
