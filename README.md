@@ -4,19 +4,31 @@
 
 #### Who?
 
-#### Wat?
+Created mostly by Benjamin Haos with the usual help from Google Search.
 
-A set of bash scripts used for archiving Cloud9 Virtual-Machines(VM).
+### Wat?
 
-View an example of the html page the script creates. <a href="https://haoscleanupcrew.github.io/cloud9_cleanup_toolset/docs/index.html">EXAMPLE!</a>
+A set of bash scripts used for working with one or more Cloud9 Virtual-Machines(VM).
+
+#### Deletion
+
+A simple webpage app for deleting a group of VM that follow a naming format of `<machine-name><machine-number>`. [link](https://haoscleanupcrew.github.io/cloud9_cleanup_toolset/delete_vm_series.html)
+
+#### Archiving
+
+A bash script useful for generating a webpage that facilitates archiving and subsuquently deleting VM. 
+* View an example of the html page the script creates. [link](https://haoscleanupcrew.github.io/cloud9_cleanup_toolset/example_vm_list.html)
 
 #### Wen?
+
+Start date : 02/2016
+Finish date : incomplete
 
 #### Wer?
 
 #### Why?
 
-While studying in Korea, ...
+Created initially to deal with several hundred VM that were spun while i was doing research and studying in Korea. Initially intended as part of a capstone project, various functionality was added later.
 
 # How?
 
